@@ -1,0 +1,40 @@
+{
+  "gatos": [
+    {
+      "id": "7f62de61-e25b-4f4a-8695-a1bbf898024b",
+      "nombre": "nefer",
+      "edad": 4,
+      "apodo": "Gorda"
+    },
+    {
+      "id": "ce0ba1e2-0143-48e8-bda4-ad1abc35ab50",
+      "nombre": "Max",
+      "edad": 1,
+      "apodo": "Guapo"
+    },
+    {
+      "id": "be7def52-c774-4da4-9196-7a76e39e044e",
+      "nombre": "nefer",
+      "edad": 4,
+      "apodo": "Gorda"
+    },
+    {
+      "id": "c36f3cec-9f0f-4159-88d7-81d4f3527b42",
+      "nombre": "Max",
+      "edad": 1,
+      "apodo": "Guapo"
+    },
+    {
+      "id": "2bc6d559-1d30-4eda-9fc1-f8dc3c19b8ac",
+      "nombre": "nefer",
+      "edad": 4,
+      "apodo": "Gorda"
+    },
+    {
+      "id": "0a9e3967-4e3b-45d5-8a91-5ef29872abdc",
+      "nombre": "Max",
+      "edad": 1,
+      "apodo": "Guapo"
+    }
+  ]
+}
