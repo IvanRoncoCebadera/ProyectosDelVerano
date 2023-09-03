@@ -1,0 +1,16 @@
+{
+  "personas": [
+    {
+      "dni": "53907934M",
+      "nombre": "Iván",
+      "apellidos": "Ronco Cebadera",
+      "edad": 19
+    },
+    {
+      "dni": "79703123F",
+      "nombre": "Nefertary",
+      "apellidos": "La Gatita",
+      "edad": 5
+    }
+  ]
+}

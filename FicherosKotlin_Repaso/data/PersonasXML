@@ -1,0 +1,14 @@
+<Personas>
+   <persona>
+      <dni>53907934M</dni>
+      <nombre>Iván</nombre>
+      <apellidos>Ronco Cebadera</apellidos>
+      <edad>19</edad>
+   </persona>
+   <persona>
+      <dni>79703123F</dni>
+      <nombre>Nefertary</nombre>
+      <apellidos>La Gatita</apellidos>
+      <edad>5</edad>
+   </persona>
+</Personas>

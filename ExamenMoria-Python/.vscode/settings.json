@@ -1,0 +1,11 @@
+{
+    "python.analysis.extraPaths": [
+        "./projecto/models/items",
+        "./projecto/models/personajes",
+        "./projecto/factories/personajes",
+        "./projecto/models/cola",
+        "./projecto/factories/salas",
+        "./projecto/models/salasPython",
+        "./projecto/utilidades"
+    ]
+}

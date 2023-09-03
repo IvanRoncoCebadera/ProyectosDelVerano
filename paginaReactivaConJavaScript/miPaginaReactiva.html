@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Galeria Iván Ronco Cebadera
+        </title>
+        <style type="text/css">
+            body{
+                background-color: coral;
+                padding: 20px, 20px, 20px, 20px;
+            }
+            header {
+                color: brown;
+                width:100%;
+                background-color: chocolate;
+                text-align: center;
+
+                padding-bottom: 20px;
+            }
+            .intro {
+                color: black;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 60%;
+                margin-left: 20%;
+                background-color:aliceblue;
+
+                border-radius: 2rem;
+            }
+            main {
+                background-color: bisque;
+
+                padding-bottom: 20px;
+            }
+            .formulario {
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                width: 80%;
+                margin-left: 10%;
+            }
+            #galeria {
+                border-radius: 2rem;
+
+                background-color: aqua;
+
+                padding-top: 20px;
+
+                width: 80%;
+                margin-left: 10%;
+
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+            #galeria img {
+                width: 80%;
+                height: 60%;
+            }
+            #galeria p {
+                font-size: 20px;
+            }
+            #galeria div {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                ¡¡¡Bienvenidos a la galería de Iván Ronco Cebadera!!!
+            </h1>
+            <section class="intro">
+                <p>
+                    En esta galería nuestro objetivo es hacer una galería a la que se vayan añadiendo fotos con títulos a voluntad.
+                </p>
+            </section>
+        </header>
+        <main>
+            <section class="formulario">
+                <form action="">
+                    <legend>Zona de introducción de datos:</legend>
+                    <fieldset>
+                        <label for="source">Por favor, introduzca el enlace de la foto a almacenar:</label><br>
+                        <input id="source" style="width : 98%" type="text" value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png"><br><br>
+                        <label for="titulo">Por favor, introduzca el título que deseas darle a la foto:</label><br>
+                        <input id="titulo" type="text" value="Hola"><br><br>
+                        <input type="button" onclick="addImage()" value="Aceptar">
+                    </fieldset>
+                </form>
+            </section>
+            <!--Esta es la sección donde se iran añadiendo las imagenes-->
+            <section id="galeria">
+                <div>
+                    <p>JavaScript logo</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png">
+                </div>
+            </section>
+        </main>
+    </body>
+    <script>
+        let galeria = document.querySelector('#galeria')
+
+        function addImage(){
+            let div = document.createElement("div"); <!--creo el div para la imagen y el título, aparte de la imganen y el parafo-->
+        
+            let img = document.createElement("img");
+            let source = document.getElementById("source");
+
+            let p = document.createElement("p");
+            let text = document.getElementById("titulo");
+
+            if(source.value == ""){
+                window.alert("No puedes meter un enlace vacio")
+                source.value = "";
+                text.value = "";
+                return;
+            }
+
+            img.src = source.value;
+
+            if(text.value == ""){
+                window.alert("No puedes meter un título vacio")
+                source.value = "";
+                text.value = "";
+                return;
+            }
+
+            p.innerHTML = text.value;
+        
+            div.appendChild(p);
+            div.appendChild(img);
+            galeria.appendChild(div);
+
+            source.value = "";
+            text.value = "";
+        }
+    </script>
+</html>
