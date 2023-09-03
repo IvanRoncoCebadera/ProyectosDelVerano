@@ -12,7 +12,33 @@ fun main(args: Array<String>){
         modules(myModule)
     }
 
+    println(Testeo().comprobarFuncionesLambda(1, "1", {n: Int, t: String -> n.toString() == t} )) //Al ser una función por parametro (funcion Lambda) y esta ser el último parametro pedido, se puede escribir la funcion fuera de los parentesis
+    println(Testeo().comprobarFuncionesLambda(1, "1") { n: Int, t: String -> n.toString() == t })
+
+    println("--------------------------------------------------------------------------------------------")
+
     Testeo().testear()
+
+    println("--------------------------------------------------------------------------------------------")
+
+    repeat(5){
+        Testeo().testear()
+    }
+
+    println("--------------------------------------------------------------------------------------------")
+
+    Testeo().miPropioRepeat(5){
+        Testeo().testear()
+    }
+
+    println("--------------------------------------------------------------------------------------------")
+
+    val lista = mutableListOf<Int>(1, 2, 3, 4 ,5)
+
+    Testeo().miPropioRepeat(7){
+        println(lista.removeFirstOrNull()?: "Te pasates con el índice: $it, crack!!" )
+    }
+
 }
 
 class Testeo(): KoinComponent{
@@ -52,6 +78,16 @@ class Testeo(): KoinComponent{
 
         for (persona in xml.importFile()) {
             println(persona)
+        }
+    }
+
+    fun comprobarFuncionesLambda(valorNumerico: Int, valorTextual: String, funcion: (Int, String) -> Boolean): Boolean{
+        return funcion(valorNumerico, valorTextual)
+    }
+
+    fun miPropioRepeat(times: Int, accion: (Int) -> Unit){
+        for(i in 1 .. times){
+            accion(i)
         }
     }
 }
