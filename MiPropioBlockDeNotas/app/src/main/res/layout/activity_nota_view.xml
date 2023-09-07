@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:text="Nota:"
+            android:layout_width="69dp"
+            android:layout_height="18dp"
+            android:id="@+id/note"
+            tools:layout_editor_absoluteY="40dp"
+            tools:layout_editor_absoluteX="16dp"
+            android:rotationX="-355" android:rotationY="-360"
+            android:rotation="-360"
+            tools:ignore="MissingConstraints"/>
+    <EditText
+            android:layout_width="264dp"
+            android:layout_height="72dp"
+            android:id="@+id/noteContent"
+            tools:layout_editor_absoluteY="16dp"
+            android:textSize="20dp"
+            android:hint="Texto..."
+            tools:ignore="MissingConstraints"
+            android:textColorHint="#78909C" app:layout_constraintStart_toEndOf="@+id/note"
+            android:layout_marginStart="12dp"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox"
+            tools:ignore="HardcodedText,MissingConstraints"
+            tools:layout_editor_absoluteY="26dp"
+            app:layout_constraintStart_toEndOf="@+id/noteContent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
